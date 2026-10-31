@@ -1,0 +1,50 @@
+# Python virtual environment
+venv/
+env/
+.venv/
+ENV/
+
+# Python cache & artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.pkl
+*.pickle
+.pytest_cache/
+.coverage/
+htmlcov/
+
+# Node & Frontend
+node_modules/
+frontend/node_modules/
+medinsight/node_modules/
+dist/
+build/
+medinsight/dist/
+.npm
+*.log
+
+# Large Deep Learning Model Weights (>100MB - exceeds GitHub file limit)
+*.safetensors
+*.pt
+*.pth
+*.bin
+checkpoints/
+
+# Data & Results (Keep code, ignore heavy files)
+data/
+Paper_Results/
+results/
+
+# Database
+medical_records.db
+*.sqlite3
+
+# Environment & Editor secrets
+.env
+.env.local
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

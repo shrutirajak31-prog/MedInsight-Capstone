@@ -1,0 +1,18 @@
+.visual-orb-core { position: absolute; width: 158px; height: 158px; left: 43%; top: 47%; transform: translate(-50%, -50%); border-radius: 50%; display: grid; place-items: center; color: var(--accent); background: radial-gradient(circle at 35% 28%, rgba(255,255,255,.8), color-mix(in srgb, var(--accent) 25%, var(--bg-card-strong)) 14%, var(--bg-card-strong) 60%); border: 1px solid color-mix(in srgb, var(--accent) 70%, transparent); box-shadow: inset -18px -14px 28px rgba(0,0,0,.3), 0 0 52px color-mix(in srgb, var(--accent) 30%, transparent); animation: orbfloat 5s ease-in-out infinite; z-index: 2; }
+.visual-orb-core span { font: 800 30px 'IBM Plex Mono', monospace; letter-spacing: -.1em; text-shadow: 0 0 18px var(--accent); }
+.visual-orb-core small { position: absolute; bottom: 37px; font: 7px 'IBM Plex Mono', monospace; letter-spacing: .14em; color: var(--muted); }
+.orb-cross { position: absolute; background: color-mix(in srgb, var(--accent) 55%, transparent); border-radius: 50%; }
+.orb-cross.horizontal { width: 192px; height: 1px; }.orb-cross.vertical { width: 1px; height: 192px; }
+@keyframes orbfloat { 50% { transform: translate(-50%, calc(-50% - 8px)) scale(1.02); } }
+.visual-scan-card { position: absolute; width: 206px; height: 175px; left: 43%; top: 47%; transform: translate(-50%, -50%) rotate(-8deg); padding: 23px 19px; display: flex; flex-direction: column; border-radius: 22px; background: linear-gradient(145deg, rgba(255,255,255,.9), rgba(219,246,247,.54)); color: #2b5963; border: 1px solid rgba(255,255,255,.88); box-shadow: 20px 25px 45px rgba(24, 92, 105, .18), inset 0 0 35px rgba(255,255,255,.55); z-index: 2; overflow: hidden; animation: scanfloat 6s ease-in-out infinite; }
+.visual-scan-card::before { content: ''; position: absolute; inset: 12px; border: 1px solid rgba(42,168,194,.25); border-radius: 13px; }
+.visual-scan-card .scan-card-top, .visual-scan-card strong, .visual-scan-card b, .visual-scan-card .scan-card-range { position: relative; z-index: 1; }
+.scan-card-top { font: 7px 'IBM Plex Mono', monospace; color: #5c8b95; letter-spacing: .08em; }
+.visual-scan-card strong { margin-top: 27px; font-size: 13px; }.visual-scan-card b { color: #138da6; font: 600 26px 'IBM Plex Mono', monospace; margin-top: 6px; }.visual-scan-card b small { font: 9px 'Plus Jakarta Sans', sans-serif; }.scan-card-range { font-size: 8px; color: #668b93; margin-top: 7px; }.scan-card-sheen { position: absolute; width: 55px; height: 240px; right: 25px; top: -30px; transform: rotate(28deg); background: linear-gradient(90deg, transparent, rgba(255,255,255,.65), transparent); filter: blur(4px); animation: sheen 4.2s infinite; }
+@keyframes scanfloat { 50% { transform: translate(-50%, calc(-50% - 8px)) rotate(-5deg); } }
+@keyframes sheen { 0%, 35% { opacity: 0; transform: translateX(-60px) rotate(28deg); } 55%, 75% { opacity: 1; } 95%, 100% { opacity: 0; transform: translateX(140px) rotate(28deg); } }
+:root[data-theme='light'] .visual-orbit { border-color: color-mix(in srgb, var(--accent) 38%, transparent); }
+:root[data-concept='neon'] .feature-card, :root[data-concept='neon'] .processing-panel, :root[data-concept='neon'] .summary-card { box-shadow: 0 0 28px color-mix(in srgb, var(--accent) 8%, transparent), var(--shadow); }
+:root[data-concept='pearl'] .processing-panel, :root[data-concept='pearl'] .summary-card, :root[data-concept='pearl'] .table-card { border-radius: 24px; box-shadow: 0 18px 50px rgba(42, 119, 132, .11); }
+:root[data-concept='pearl'] .hero-visual { filter: saturate(.92); }
+:root[data-concept='holo'] .graph-card { background-image: linear-gradient(115deg, color-mix(in srgb, var(--accent) 5%, transparent), transparent 48%); }
