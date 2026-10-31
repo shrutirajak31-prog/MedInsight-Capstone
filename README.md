@@ -15,7 +15,7 @@ Medical laboratory reports contain dense terminology and tabular data that are o
 
 ## 🏗️ System Architecture
 
-![MedInsight Architecture](fig1.png)
+![MedInsight Architecture](assets/fig1.png)
 
 The pipeline flows through the following stages:
 1. **Document Ingestion:** Extracts text and bounding boxes using PyMuPDF (digital) or EasyOCR (scanned images).
